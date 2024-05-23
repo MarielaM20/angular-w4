@@ -1,0 +1,13 @@
+<div class="container">
+    <app-controller orientation="vertical" initialSignal="red" [urgentMode]="urgent"></app-controller>
+    <div class="inline">
+      <app-controller orientation="horizontal" initialSignal="green" [urgentMode]="urgent"></app-controller>
+      <button
+        [disabled]="isCoolingDown"
+        [class]="urgent ? 'disabled' : ''"
+        (click)="triggerUrgentMode()"
+      >АВАРИЯ</button>
+      <app-controller orientation="horizontal" initialSignal="green" [urgentMode]="urgent"></app-controller>
+    </div>
+    <app-controller orientation="vertical" initialSignal="red" [urgentMode]="urgent"></app-controller>
+  </div>
